@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotationScript : MonoBehaviour {
-    public float rotationsPerMinute = 640f;
+public class MovingBlock : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +11,8 @@ public class RotationScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(0,0,rotationsPerMinute*Time.deltaTime,Space.Self);
+       
+        //transform.position = new Vector3(transform.position.x,Mathf.Sin(Time.time),transform.position.z);	
 	}
+
 }
