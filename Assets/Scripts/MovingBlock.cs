@@ -26,12 +26,29 @@ public class MovingBlock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(currentMoveType == MovingType.linearMove){
-            LinearMove(verticalSpeed,horizontalSpeed);
+        if (currentMoveType == MovingType.linearMove)
+        {
+            LinearMove(verticalSpeed, horizontalSpeed);
         }
+        else if (currentMoveType == MovingType.CursiveMove)
+        {
+            //
+        }
+        else if (currentMoveType == MovingType.periodicLinearMove)
+        {
+
+        }
+        else if (currentMoveType == MovingType.rotate){
+            Rotate(rotationSpeed);
+        }
+            
 	}
     void LinearMove(float vertical, float horizontal){
-        transform.position = new Vector3(transform.position.x + vertical * Time.deltaTime, transform.position.y + horizontal * Time.deltaTime, transform.position.z);
+        transform.position = new Vector3(transform.position.x + horizontal * Time.deltaTime, transform.position.y + vertical * Time.deltaTime, transform.position.z);
     }
+    void Rotate(float rotate){
+        transform.Rotate(Vector3.forward*rotate*Time.deltaTime);
+    }
+
 
 }
