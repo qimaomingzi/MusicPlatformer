@@ -162,4 +162,8 @@ public class SoyBoyController : MonoBehaviour {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
     }
+    private void OnBecameInvisible()
+    {
+        GameManager.instance.RestartLevel(1.25f);
+    }
 }
