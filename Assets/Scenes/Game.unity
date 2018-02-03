@@ -837,6 +837,11 @@ Prefab:
       propertyPath: m_Name
       value: single-block (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 114601298238514720, guid: da0922812e206c047a57c2a8ddbdbaa8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da0922812e206c047a57c2a8ddbdbaa8, type: 2}
   m_IsPrefabParent: 0
