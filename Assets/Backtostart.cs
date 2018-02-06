@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Backtostart : MonoBehaviour {
-
+    public GameObject spawnPoint;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +17,7 @@ public class Backtostart : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Beatline")
         {
+
             Debug.Log("It hit");
         }
     }
