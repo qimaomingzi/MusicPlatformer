@@ -22,9 +22,12 @@ GameObject:
   - component: {fileID: 61624241989242118}
   - component: {fileID: 212132266195655066}
   - component: {fileID: 114721949698193832}
+  - component: {fileID: 50830127856513268}
+  - component: {fileID: 114396589265619838}
+  - component: {fileID: 114888978050782578}
   m_Layer: 10
   m_Name: LineCheck
-  m_TagString: Untagged
+  m_TagString: Beatline
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +39,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1853364299989446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -9.48, y: 0.07, z: 20}
   m_LocalScale: {x: 0.1, y: 11, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50830127856513268
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853364299989446}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61624241989242118
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -67,6 +90,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.228626, y: 0.97013664}
   m_EdgeRadius: 0
+--- !u!114 &114396589265619838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853364299989446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f6c39c71fdf89498808418465e0c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  currentXposition: 0
+  lineLimiter: 0
+  startingSpot: {fileID: 0}
+  beatLine: {fileID: 1853364299989446}
 --- !u!114 &114721949698193832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,6 +117,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7546864d0f0f4b1587760ee9351a8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114888978050782578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853364299989446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1d0ed83eb8e304caf2a9cff10b25be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
 --- !u!212 &212132266195655066
 SpriteRenderer:
   m_ObjectHideFlags: 1

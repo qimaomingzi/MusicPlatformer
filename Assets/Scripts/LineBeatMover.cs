@@ -7,6 +7,7 @@ public class LineBeatMover : MonoBehaviour {
     public float currentXposition;
     public float lineLimiter;
     public GameObject startingSpot;
+    public GameObject beatLine;
     Collider2D collision;
     Rigidbody2D rb2d;
 	// Use this for initialization
@@ -14,7 +15,6 @@ public class LineBeatMover : MonoBehaviour {
     {
         rb2d = GetComponent<Rigidbody2D>();
         collision = GetComponent<Collider2D>();
-        startingSpot = GetComponent<GameObject>();
 	}
 
     private void FixedUpdate()
@@ -26,12 +26,13 @@ public class LineBeatMover : MonoBehaviour {
     void Update ()
     { 
 
-	}
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Beatline")
+        if (collision.gameObject.tag == "Linecheckend")
         {
-             
+            beatLine.gameObject.transform.position = startingSpot.transform.position;
+            rb2d.velocity = new Vector2(speed * Time.deltaTime, 0);
             Debug.Log("It hit");
         }
     }
