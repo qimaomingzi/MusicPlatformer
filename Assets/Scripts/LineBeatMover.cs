@@ -8,6 +8,7 @@ public class LineBeatMover : MonoBehaviour {
     public float lineLimiter;
     public GameObject startingSpot;
     public GameObject beatLine;
+    public Vector3 lineStart;
     Collider2D collision;
     Rigidbody2D rb2d;
 	// Use this for initialization
@@ -19,20 +20,20 @@ public class LineBeatMover : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        rb2d.velocity = new Vector2(speed * Time.deltaTime, 0);
+        rb2d.velocity = new Vector3(speed * Time.deltaTime, 0, 0);
     }
 
     // Update is called once per frame
     void Update ()
-    { 
-
+    {
+        lineStart = startingSpot.transform.position;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Linecheckend")
         {
-            beatLine.gameObject.transform.position = startingSpot.transform.position;
-            rb2d.velocity = new Vector2(speed * Time.deltaTime, 0);
+            beatLine.gameObject.transform.position = lineStart;
+            rb2d.velocity = new Vector3(speed * Time.deltaTime, 0, 0);
             Debug.Log("It hit");
         }
     }
