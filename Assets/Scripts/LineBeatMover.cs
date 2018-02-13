@@ -11,12 +11,14 @@ public class LineBeatMover : MonoBehaviour {
     public Vector3 lineStart;
     Collider2D collision;
     Rigidbody2D rb2d;
+    SpriteRenderer spriteColor;
     public GameObject collidedWith;
 	// Use this for initialization
 	void Start ()
     {
         rb2d = GetComponent<Rigidbody2D>();
         collision = GetComponent<Collider2D>();
+        spriteColor = GetComponent<SpriteRenderer>();
 	}
 
     private void FixedUpdate()
@@ -47,7 +49,6 @@ public class LineBeatMover : MonoBehaviour {
                 Debug.Log("Triggered Platform lock on" + collision.name);
                 collision.isTrigger = false;
             }
-            
         }
     }
 }
