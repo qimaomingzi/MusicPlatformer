@@ -45,6 +45,7 @@ public class LineBeatMover : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Debug.Log("Triggered Platform lock on" + collision.name);
+                collision.isTrigger = false;
             }
             
         }
