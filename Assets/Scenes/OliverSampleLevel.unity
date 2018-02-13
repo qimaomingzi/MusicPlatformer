@@ -275,6 +275,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1853364299989446, guid: 94a9a3e84b20042468c431f27616b730, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94a9a3e84b20042468c431f27616b730, type: 2}
   m_IsPrefabParent: 0
@@ -386,7 +390,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874308427700622, guid: 4c97f9ba883e7784aa5020a9eee15435, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4874308427700622, guid: 4c97f9ba883e7784aa5020a9eee15435, type: 2}
       propertyPath: m_LocalRotation.x
@@ -435,6 +439,25 @@ Prefab:
         type: 2}
       propertyPath: m_BodyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61463406107760018, guid: 4c97f9ba883e7784aa5020a9eee15435,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024885911949906, guid: 4c97f9ba883e7784aa5020a9eee15435, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 61463406107760018, guid: 4c97f9ba883e7784aa5020a9eee15435,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50524171487262682, guid: 4c97f9ba883e7784aa5020a9eee15435,
+        type: 2}
+      propertyPath: m_SleepingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c97f9ba883e7784aa5020a9eee15435, type: 2}
@@ -540,7 +563,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4874308427700622, guid: 4c97f9ba883e7784aa5020a9eee15435, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4874308427700622, guid: 4c97f9ba883e7784aa5020a9eee15435, type: 2}
       propertyPath: m_LocalRotation.x
@@ -629,7 +652,7 @@ Prefab:
     - target: {fileID: 114130069209544708, guid: 4c97f9ba883e7784aa5020a9eee15435,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114130069209544708, guid: 4c97f9ba883e7784aa5020a9eee15435,
         type: 2}
@@ -736,9 +759,8 @@ GameObject:
   - component: {fileID: 1968347703}
   - component: {fileID: 1968347700}
   - component: {fileID: 1968347701}
-  - component: {fileID: 1968347702}
   - component: {fileID: 1968347699}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: LineCheck
   m_TagString: Linecheckstart
   m_Icon: {fileID: 0}
@@ -842,17 +864,7 @@ MonoBehaviour:
   startingSpot: {fileID: 546239963}
   beatLine: {fileID: 1968347697}
   lineStart: {x: 0, y: 0, z: 0}
---- !u!114 &1968347702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968347697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7546864d0f0f4b1587760ee9351a8d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  collidedWith: {fileID: 0}
 --- !u!61 &1968347703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -884,6 +896,31 @@ GameObject:
   m_PrefabParentObject: {fileID: 1024885911949906, guid: 4c97f9ba883e7784aa5020a9eee15435,
     type: 2}
   m_PrefabInternal: {fileID: 1162836463}
+--- !u!61 &2075251063
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2075251062}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &2075251068
 MonoBehaviour:
   m_ObjectHideFlags: 0

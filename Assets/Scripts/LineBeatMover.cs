@@ -11,6 +11,7 @@ public class LineBeatMover : MonoBehaviour {
     public Vector3 lineStart;
     Collider2D collision;
     Rigidbody2D rb2d;
+    public GameObject collidedWith;
 	// Use this for initialization
 	void Start ()
     {
@@ -35,6 +36,17 @@ public class LineBeatMover : MonoBehaviour {
             beatLine.gameObject.transform.position = lineStart;
             rb2d.velocity = new Vector3(speed * Time.deltaTime, 0, 0);
             Debug.Log("It hit");
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Platform")
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Triggered Platform lock on" + collision.name);
+            }
+            
         }
     }
 }
